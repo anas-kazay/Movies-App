@@ -2,11 +2,12 @@ import ReactPlayer from "react-player";
 import "./Trailer.css";
 
 import React from "react";
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 
 const Trailer = () => {
-  let params = useSearchParams();
+  let params = useParams();
   let key = params.ytTrailerId;
+  console.log(params);
   return (
     <div className="react-player-container">
       {key != null ? (
